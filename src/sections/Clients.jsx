@@ -1,10 +1,10 @@
 import React from "react";
-import {clientReviews} from "../constants/index.js";
+import {clientReviews, CLIENTS_SECTION_TITLE, CLIENTS_STAR_ALT_TEXT, CLIENTS_STAR_IMAGE_SRC} from "../constants/clients.js";
 
 const Clients = () => {
     return (
         <section className={"c-space my-20"}>
-            <h3 className={"head-text"}>Hear from my Peers</h3>
+            <h3 className={"head-text"}>{CLIENTS_SECTION_TITLE}</h3>
 
             <div className={"client-container"}>
                 {clientReviews.map(({id, name, review, img, position}) => (
@@ -29,8 +29,8 @@ const Clients = () => {
                                     {Array.from({length: 5}).map((_, index) => (
                                         <img
                                             key={index}
-                                            src={"/assets/star.png"}
-                                            alt={"star"}
+                                            src={CLIENTS_STAR_IMAGE_SRC}
+                                            alt={CLIENTS_STAR_ALT_TEXT}
                                             className={"w-5 h-5"}
                                         />
                                     ))}

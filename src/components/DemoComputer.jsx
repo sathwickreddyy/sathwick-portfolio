@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { useGLTF, useVideoTexture } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import {DEMO_COMPUTER_GLB_PATH, DEMO_COMPUTER_VIDEO_TEXTURE} from "../constants/components.js";
 
 const DemoComputer = (props) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/computer.glb");
+  const { nodes, materials, animations } = useGLTF(DEMO_COMPUTER_GLB_PATH);
 
   const videoTexture = useVideoTexture(
-    props.texture ? props.texture : "/textures/project/project1.mp4"
+    props.texture ? props.texture : DEMO_COMPUTER_VIDEO_TEXTURE
   );
 
   useEffect(() => {
@@ -1015,6 +1016,6 @@ const DemoComputer = (props) => {
   );
 };
 
-useGLTF.preload("/models/computer.glb");
+useGLTF.preload(DEMO_COMPUTER_GLB_PATH);
 
 export default DemoComputer;

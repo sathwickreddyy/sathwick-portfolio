@@ -1,6 +1,6 @@
 import React, {Suspense, useEffect, useRef, useState} from "react";
 import {Canvas} from "@react-three/fiber";
-import {workExperiences} from "../constants/index.js";
+import {workExperiences} from "../constants/experiences.js";
 import {OrbitControls} from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import Developer from "../components/Developer.jsx";

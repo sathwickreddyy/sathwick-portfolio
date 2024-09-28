@@ -1,29 +1,31 @@
 import React, {useEffect, useRef} from "react";
 import {useAnimations, useFBX, useGLTF} from "@react-three/drei";
+import {
+    DEVELOPER_CLAPPING_ANIMATION_PATH,
+    DEVELOPER_IDLE_ANIMATION_PATH,
+    DEVELOPER_MODEL_PATH,
+    DEVELOPER_SALUTE_ANIMATION_PATH, DEVELOPER_VICTORY_ANIMATION_PATH
+} from "../constants/components.js";
 
-const Developer = ({animationName = 'idle', ...props}) => {
+const Developer = ({ animationName = 'idle', ...props }) => {
     const group = useRef();
 
-    const {nodes, materials} = useGLTF("/models/developer.glb");
+    const { nodes, materials } = useGLTF(DEVELOPER_MODEL_PATH);
 
-    const {animations: idleAnimation} = useFBX(
-        "/models/animations/idle.fbx"
-    );
-    const {animations: saluteAnimation} = useFBX(
-        "/models/animations/salute.fbx"
-    );
-    const {animations: clappingAnimation} = useFBX(
-        "/models/animations/clapping.fbx"
-    );
-    const {animations: victoryAnimation} = useFBX(
-        "/models/animations/victory.fbx"
-    );
+    const { animations: idleAnimation } = useFBX(DEVELOPER_IDLE_ANIMATION_PATH);
+    const { animations: saluteAnimation } = useFBX(DEVELOPER_SALUTE_ANIMATION_PATH);
+    const { animations: clappingAnimation } = useFBX(DEVELOPER_CLAPPING_ANIMATION_PATH);
+    const { animations: victoryAnimation } = useFBX(DEVELOPER_VICTORY_ANIMATION_PATH);
+
     idleAnimation[0].name = 'idle';
     saluteAnimation[0].name = 'salute';
     clappingAnimation[0].name = 'clapping';
     victoryAnimation[0].name = 'victory';
 
-    const {actions} = useAnimations([idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]], group);
+    const { actions } = useAnimations(
+        [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
+        group
+    );
 
     useEffect(() => {
         actions[animationName].reset().fadeIn(0.5).play();
@@ -33,7 +35,7 @@ const Developer = ({animationName = 'idle', ...props}) => {
 
     return (
         <group {...props} dispose={null} ref={group}>
-            <primitive object={nodes.Hips}/>
+            <primitive object={nodes.Hips} />
             <skinnedMesh
                 name="EyeLeft"
                 geometry={nodes.EyeLeft.geometry}
@@ -100,5 +102,5 @@ const Developer = ({animationName = 'idle', ...props}) => {
     );
 };
 
-useGLTF.preload("/models/developer.glb");
+useGLTF.preload(DEVELOPER_MODEL_PATH);
 export default Developer;

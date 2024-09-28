@@ -1,0 +1,14 @@
+export const AMAZON_LOGO_GLB_PATH = "/models/amazon-logo.glb"
+export const CUBE_GLB_PATH = "/models/cube.glb"
+export const CUBE_TEXTURE_PATH = "/textures/cube.png"
+export const DEMO_COMPUTER_GLB_PATH = "/models/computer.glb"
+export const DEMO_COMPUTER_VIDEO_TEXTURE = "/textures/project/project1.mp4"
+export const DEVELOPER_MODEL_PATH = "/models/developer.glb";
+export const DEVELOPER_IDLE_ANIMATION_PATH = "/models/animations/idle.fbx";
+export const DEVELOPER_SALUTE_ANIMATION_PATH = "/models/animations/salute.fbx";
+export const DEVELOPER_CLAPPING_ANIMATION_PATH = "/models/animations/clapping.fbx";
+export const DEVELOPER_VICTORY_ANIMATION_PATH = "/models/animations/victory.fbx";
+export const HACKER_ROOM_MODEL_PATH = "/models/hacker-room.glb";
+export const HACKER_ROOM_MONITOR_TEXTURE_PATH = "/textures/desk/monitor.png";
+export const HACKER_ROOM_SCREEN_TEXTURE_PATH = "/textures/desk/profile_pic.png";
+export const RINGS_TEXTURE_PATH = "/textures/rings.png"

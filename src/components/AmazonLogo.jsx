@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import { Float, useAnimations, useGLTF } from "@react-three/drei";
+import {AMAZON_LOGO_GLB_PATH} from "../constants/components.js";
 
 const AmazonLogo = (props) => {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "/models/amazon-logo.glb",
+      AMAZON_LOGO_GLB_PATH,
     true
   );
   const { actions, mixer } = useAnimations(animations, group);
@@ -63,5 +64,5 @@ const AmazonLogo = (props) => {
   );
 };
 
-useGLTF.preload("/models/amazon-logo.glb");
+useGLTF.preload(AMAZON_LOGO_GLB_PATH);
 export default AmazonLogo;

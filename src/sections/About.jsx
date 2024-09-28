@@ -6,22 +6,41 @@ import PdfViewer from "../utilities/PDFViewer.jsx";
 import {hideResume, showResume} from "../utilities/redux/viewResume.jsx";
 import {useMediaQuery} from "react-responsive";
 import {PROFILE_PIC} from "../constants/index.js";
+import {
+    GRID_COL_SPAN_2_IMAGE_ALT_TEXT,
+    GRID_COL_SPAN_2_IMAGE_SRC,
+    GRID_COL_SPAN_2_TECH_STACK_DESCRIPTION,
+    GRID_COL_SPAN_2_TECH_STACK_HEADING,
+    GRID_COL_SPAN_4_DOWNLOAD_RESUME_TEXT,
+    GRID_COL_SPAN_4_FILE_NAME,
+    GRID_COL_SPAN_4_FILE_PATH,
+    GRID_COL_SPAN_4_GO_BACK_TEXT,
+    GRID_COL_SPAN_4_HEADTEXT,
+    GRID_COL_SPAN_4_IMAGE_ALT,
+    GRID_COL_SPAN_4_IMAGE_SRC,
+    GRID_COL_SPAN_4_SUBTEXT,
+    GRID_COL_SPAN_4_VIEW_RESUME_TEXT, GRID_COL_SPAN_5_ASSET_COPY_IMAGE,
+    GRID_COL_SPAN_5_ASSET_GRID_IMAGE,
+    GRID_COL_SPAN_5_ASSET_TICK_IMAGE, GRID_COL_SPAN_5_COPY_ALT_TEXT, GRID_COL_SPAN_5_COPY_MOBILE_ALT_TEXT,
+    GRID_COL_SPAN_5_GRID_ALT_TEXT,
+    GRID_COL_SPAN_5_MAIL_ADDRESS,
+    GRID_COL_SPAN_5_MOBILE_NUMBER,
+    IMAGE_ALT_TEXT,
+    PROFILE_DESCRIPTION
+} from "../constants/about.js";
 
 const GridColSpan1 = () => (
-    <div className={"col-span-1 xl:row-span-3"}>
-        <div className={"grid-container"}>
+    <div className="col-span-1 xl:row-span-3">
+        <div className="grid-container">
             <img
                 src={PROFILE_PIC}
-                alt={"grid-1"}
-                className={"w-full sm:h-[276px] 2xl:h-[532px] h-fit object-contain"}
+                alt={IMAGE_ALT_TEXT}
+                className="w-full sm:h-[276px] 2xl:h-[532px] h-fit object-contain"
             />
             <div>
-                <p className={"grid-headtext"}>Hi, I&apos;m Sathwick Reddy</p>
-                <p className={"grid-subtext text-sm text-justify"}>
-                    With four years of experience, I honed my skills in backend, cloud,
-                    and frontend development, consistently delivering scalable solutions.
-                    My expertise encompasses problem-solving, data structures, algorithms,
-                    and system design.
+                <p className="grid-headtext">Hi, I&apos;m Sathwick Reddy</p>
+                <p className="grid-subtext text-sm text-justify">
+                    {PROFILE_DESCRIPTION}
                 </p>
             </div>
         </div>
@@ -29,24 +48,17 @@ const GridColSpan1 = () => (
 );
 
 const GridColSpan2 = () => (
-    <div className={"col-span-1 xl:row-span-3"}>
-        <div className={"grid-container flex items-center"}>
+    <div className="col-span-1 xl:row-span-3">
+        <div className="grid-container flex items-center">
             <img
-                src={"/assets/grid2.png"}
-                alt={
-                    "https://drive.google.com/file/d/1J1vvk6JylV0eavNWHMu84NPwzdID8U9W/view?usp=sharing"
-                }
-                className={"w-full sm:w-[276px] 2xl:h-[532px] h-fit object-contain"}
+                src={GRID_COL_SPAN_2_IMAGE_SRC}
+                alt={GRID_COL_SPAN_2_IMAGE_ALT_TEXT}
+                className="w-full sm:w-[276px] 2xl:h-[532px] h-fit object-contain"
             />
             <div>
-                <p className={"grid-headtext"}>Tech Stack</p>
-                <p className={"grid-subtext text-justify"}>
-                    I am proficient in a variety of programming languages and frameworks,
-                    including Python, Java, Spring Boot, and Angular JS, TypeScript, React
-                    JS, Tailwind CSS, Node JS, Additionally, I have significant experience
-                    with big data technologies such as Hadoop and Apache Spark and am
-                    adept at utilizing AWS cloud services. Have hands on experience in
-                    machine learning domain.
+                <p className="grid-headtext">{GRID_COL_SPAN_2_TECH_STACK_HEADING}</p>
+                <p className="grid-subtext text-justify">
+                    {GRID_COL_SPAN_2_TECH_STACK_DESCRIPTION}
                 </p>
             </div>
         </div>
@@ -134,74 +146,63 @@ const GridColSpan4 = () => {
     const dispatch = useDispatch();
     const viewResume = useSelector(store => store.resume);
 
-
     const handleDownload = () => {
-        const fileName = "SathwickReddyResume.pdf";
         const aTag = document.createElement("a");
-        aTag.href = `/pdfs/resume.pdf`;
-        aTag.setAttribute("download", fileName);
+        aTag.href = GRID_COL_SPAN_4_FILE_PATH;
+        aTag.setAttribute("download", GRID_COL_SPAN_4_FILE_NAME);
         document.body.appendChild(aTag);
         aTag.click();
         aTag.remove();
-    }
+    };
 
     const ResumeView = () => (
-        <div className={"grid-container flex flex-col"}>
-            <PdfViewer/>
+        <div className="grid-container flex flex-col">
+            <PdfViewer />
 
-            <div className={"mt-auto w-full"}>
+            <div className="mt-auto w-full">
                 <div>
-                    <div className={"mt-auto flex justify-between"}>
+                    <div className="mt-auto flex justify-between">
                         <div onClick={() => dispatch(hideResume())}>
-                            <Button name={"Go Back"} isBeam
-                                    containerClass={"w-full mt-10"}/>
+                            <Button name={GRID_COL_SPAN_4_GO_BACK_TEXT} isBeam containerClass="w-full mt-10" />
                         </div>
                         <div onClick={handleDownload}>
-                            <Button name={"Download Resume"} isBeam containerClass={"w-full mt-10"}/>
+                            <Button name={GRID_COL_SPAN_4_DOWNLOAD_RESUME_TEXT} isBeam containerClass="w-full mt-10" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 
     const NormalView = () => (
-        <div className={"grid-container flex flex-col "}>
-            <div className={"flex xl:flex-row flex-col"}>
-                <div className={"flex flex-col"}>
+        <div className="grid-container flex flex-col">
+            <div className="flex xl:flex-row flex-col">
+                <div className="flex flex-col">
                     <img
-                        src={"/assets/grid3.png"}
-                        alt={"grid-4"}
-                        className={"w-full sm:h-[266px] xl:h-[532px] h-fit object-contain"}
+                        src={GRID_COL_SPAN_4_IMAGE_SRC}
+                        alt={GRID_COL_SPAN_4_IMAGE_ALT}
+                        className="w-full sm:h-[266px] xl:h-[532px] h-fit object-contain"
                     />
                 </div>
             </div>
 
-            <div className={"mt-auto w-full"}>
+            <div className="mt-auto w-full">
                 <div>
-                    <div className={"p-2 text-center"}>
-                        <p className={"grid-headtext"}>My Passion for Coding</p>
-                        <p className={"grid-subtext"}>
-                            I love solving problems and building things through code. Coding
-                            isn't just my profession - it's my passion.
-                        </p>
+                    <div className="p-2 text-center">
+                        <p className="grid-headtext">{GRID_COL_SPAN_4_HEADTEXT}</p>
+                        <p className="grid-subtext">{GRID_COL_SPAN_4_SUBTEXT}</p>
                     </div>
-                    <div className={"mt-auto"} onClick={() => dispatch(showResume())}>
-                        <Button name={!viewResume ? "View Resume" : "Go Back"} isBeam
-                                containerClass={"w-full mt-10"}/>
+                    <div className="mt-auto" onClick={() => dispatch(showResume())}>
+                        <Button name={!viewResume ? GRID_COL_SPAN_4_VIEW_RESUME_TEXT : GRID_COL_SPAN_4_GO_BACK_TEXT} isBeam containerClass="w-full mt-10" />
                     </div>
                 </div>
-
             </div>
-
         </div>
-    )
+    );
 
     return (
-        <div className={"xl:col-span-2 xl:row-span-3"} id={"resume"}>
-            {
-                viewResume ? <ResumeView/> : <NormalView/>
-            }
+        <div className="xl:col-span-2 xl:row-span-3" id="resume">
+            {viewResume ? <ResumeView /> : <NormalView />}
         </div>
     );
 };
@@ -213,7 +214,7 @@ const GridColSpan5 = () => {
     const [hasMobileCopied, setHasMobileCopied] = useState(false);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(mailAddress);
+        navigator.clipboard.writeText(GRID_COL_SPAN_5_MAIL_ADDRESS);
         setHasCopied(true);
         setTimeout(() => {
             setHasCopied(false);
@@ -221,7 +222,7 @@ const GridColSpan5 = () => {
     };
 
     const handleMobileNumberCopy = () => {
-        navigator.clipboard.writeText(mobileNumber);
+        navigator.clipboard.writeText(GRID_COL_SPAN_5_MOBILE_NUMBER);
         setHasMobileCopied(true);
         setTimeout(() => {
             setHasMobileCopied(false);
@@ -232,8 +233,8 @@ const GridColSpan5 = () => {
         <div className={"xl:col-span-1 xl:row-span-2"}>
             <div className={"grid-container"}>
                 <img
-                    src={"/assets/grid4.png"}
-                    alt={"grid-4"}
+                    src={GRID_COL_SPAN_5_ASSET_GRID_IMAGE}
+                    alt={GRID_COL_SPAN_5_GRID_ALT_TEXT}
                     className={"w-full sm:h-[276px] h-fit object-contain "}
                 />
 
@@ -241,28 +242,28 @@ const GridColSpan5 = () => {
                     <p className={"grid-subtext text-center"}>Contact me directly: </p>
                     <div className={"copy-container"} onClick={handleCopy}>
                         <img
-                            src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
-                            alt={"copy"}
+                            src={hasCopied ? GRID_COL_SPAN_5_ASSET_TICK_IMAGE : GRID_COL_SPAN_5_ASSET_COPY_IMAGE}
+                            alt={GRID_COL_SPAN_5_COPY_ALT_TEXT}
                         />
                         <p
                             className={
                                 "lg:text-2xl md:text-xl font-medium text-gray_gradient"
                             }
                         >
-                            {mailAddress} /
+                            {GRID_COL_SPAN_5_MAIL_ADDRESS} /
                         </p>
                     </div>
                     <div className={"copy-container"} onClick={handleMobileNumberCopy}>
                         <img
-                            src={hasMobileCopied ? "assets/tick.svg" : "assets/copy.svg"}
-                            alt={"copy-mobile"}
+                            src={hasMobileCopied ? GRID_COL_SPAN_5_ASSET_TICK_IMAGE : GRID_COL_SPAN_5_ASSET_COPY_IMAGE}
+                            alt={GRID_COL_SPAN_5_COPY_MOBILE_ALT_TEXT}
                         />
                         <p
                             className={
                                 "lg:text-2xl md:text-xl font-medium text-gray_gradient"
                             }
                         >
-                            {mobileNumber}
+                            {GRID_COL_SPAN_5_MOBILE_NUMBER}
                         </p>
                     </div>
                 </div>

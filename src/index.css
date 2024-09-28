@@ -93,7 +93,7 @@ body {
         @apply w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center;
     }
 
-    /* clients section */
+    /* clients.js section */
     .client-container {
         @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
     }

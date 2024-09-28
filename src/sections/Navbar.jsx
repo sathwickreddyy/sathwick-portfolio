@@ -1,5 +1,11 @@
 import React from "react";
-import {navLinks} from "../constants/index.js";
+import {
+    NAVBAR_HOME_LINK,
+    NAVBAR_OWNER_NAME, NAVBAR_TOGGLE_ALT_TEXT,
+    NAVBAR_TOGGLE_IMAGE_CLOSE,
+    NAVBAR_TOGGLE_IMAGE_OPEN,
+    navLinks
+} from "../constants/index.js";
 import {useDispatch} from "react-redux";
 import {hideResume, showResume} from "../utilities/redux/viewResume.jsx";
 
@@ -59,18 +65,18 @@ const Navbar = () => {
                         className={"flex justify-between items-center py-5 mx-auto c-space"}
                     >
                         <a
-                            href={"/"}
+                            href={NAVBAR_HOME_LINK}
                             className={
                                 "text-neutral-400 font-bold text-xl hover:text-white transition-colors"
                             }
                         >
-                            Sathwick Reddy , Yalla
+                            {NAVBAR_OWNER_NAME}
                         </a>
 
                         <button onClick={toggleMenu}>
                             <img
-                                src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-                                alt={"toggle"}
+                                src={isOpen ? NAVBAR_TOGGLE_IMAGE_CLOSE : NAVBAR_TOGGLE_IMAGE_OPEN}
+                                alt={NAVBAR_TOGGLE_ALT_TEXT}
                                 className={
                                     "w-6 h-6 text-neutral-400 hover:text-white focus:outline-none md:hidden flex"
                                 }
@@ -92,4 +98,5 @@ const Navbar = () => {
         </div>
     );
 };
+
 export default Navbar;

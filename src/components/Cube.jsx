@@ -2,11 +2,12 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef, useState } from "react";
 import { Float, useGLTF, useTexture } from "@react-three/drei";
+import {CUBE_GLB_PATH, CUBE_TEXTURE_PATH} from "../constants/components.js";
 
 const Cube = ({ ...props }) => {
-  const { nodes } = useGLTF("models/cube.glb");
+  const { nodes } = useGLTF(CUBE_GLB_PATH);
 
-  const texture = useTexture("textures/cube.png");
+  const texture = useTexture(CUBE_TEXTURE_PATH);
 
   const cubeRef = useRef();
   const [hovered, setHovered] = useState(false);
@@ -51,6 +52,6 @@ const Cube = ({ ...props }) => {
   );
 };
 
-useGLTF.preload("models/cube.glb");
+useGLTF.preload(CUBE_GLB_PATH);
 
 export default Cube;

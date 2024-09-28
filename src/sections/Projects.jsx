@@ -1,9 +1,20 @@
 import React, {Suspense} from "react";
-import {myProjects} from "../constants/index.js";
+import {myProjects} from "../constants/projects.js";
 import {Canvas} from "@react-three/fiber";
 import {Center, OrbitControls} from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import DemoComputer from "../components/DemoComputer.jsx";
+import {
+    PROJECT_SECTION_ARROW_LEFT_ALT_TEXT,
+    PROJECT_SECTION_ARROW_LEFT_IMAGE,
+    PROJECT_SECTION_ARROW_RIGHT_ALT_TEXT,
+    PROJECT_SECTION_ARROW_RIGHT_IMAGE,
+    PROJECT_SECTION_ARROW_UP_IMAGE,
+    PROJECT_SECTION_ID,
+    PROJECT_SECTION_LOGO_ALT_TEXT,
+    PROJECT_SECTION_SPOTLIGHT_ALT_TEXT,
+    PROJECT_SECTION_TITLE
+} from "../constants/projects.js";
 
 const projectsCount = myProjects.length;
 
@@ -26,7 +37,7 @@ const DisplayTags = ({currentProject}) => (
             href={currentProject.href}
         >
             <p>Check Live Site</p>
-            <img src={"/assets/arrow-up.png"} alt={"arrow"} className={"w-3 h-3"}/>
+            <img src={PROJECT_SECTION_ARROW_UP_IMAGE} alt={"arrow-up"} className={"w-3 h-3"}/>
         </a>
     </div>
 );
@@ -66,8 +77,8 @@ const Projects = () => {
     };
 
     return (
-        <section className={"c-space my-20"} id={"projects"}>
-            <p className={"head-text"}>Projects</p>
+        <section className={"c-space my-20"} id={PROJECT_SECTION_ID}>
+            <p className={"head-text"}>{PROJECT_SECTION_TITLE}</p>
             <div className={"grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full"}>
                 <div
                     className={
@@ -77,7 +88,7 @@ const Projects = () => {
                     <div className={"absolute top-0 right-0"}>
                         <img
                             src={currentProject.spotlight}
-                            alt={"spotlight"}
+                            alt={PROJECT_SECTION_SPOTLIGHT_ALT_TEXT}
                             className={"w-full h-96 object-cover rounded-xl"}
                         />
                     </div>
@@ -88,7 +99,7 @@ const Projects = () => {
                     >
                         <img
                             src={currentProject.logo}
-                            alt={"logo"}
+                            alt={PROJECT_SECTION_LOGO_ALT_TEXT}
                             className={"w-10 h-10 shadow-sm"}
                         />
                     </div>
@@ -109,9 +120,9 @@ const Projects = () => {
                             onClick={() => handleNavigation("previous")}
                         >
                             <img
-                                src={"/assets/left-arrow.png"}
+                                src={PROJECT_SECTION_ARROW_LEFT_IMAGE}
                                 className={"w-4 h-4"}
-                                alt={"arrow-left"}
+                                alt={PROJECT_SECTION_ARROW_LEFT_ALT_TEXT}
                             />
                         </button>
 
@@ -120,9 +131,9 @@ const Projects = () => {
                             onClick={() => handleNavigation("next")}
                         >
                             <img
-                                src={"/assets/right-arrow.png"}
+                                src={PROJECT_SECTION_ARROW_RIGHT_IMAGE}
                                 className={"w-4 h-4"}
-                                alt={"arrow-right"}
+                                alt={PROJECT_SECTION_ARROW_RIGHT_ALT_TEXT}
                             />
                         </button>
                     </div>
