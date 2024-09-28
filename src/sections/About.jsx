@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import PdfViewer from "../utilities/PDFViewer.jsx";
 import {hideResume, showResume} from "../utilities/redux/viewResume.jsx";
 import {useMediaQuery} from "react-responsive";
-import {PROFILE_PIC} from "../constants/index.js";
+import {PROFILE_PIC} from "../constants/about.js";
 import {
     GRID_COL_SPAN_2_IMAGE_ALT_TEXT,
     GRID_COL_SPAN_2_IMAGE_SRC,

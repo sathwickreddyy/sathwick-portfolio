@@ -33,8 +33,8 @@ export const navLinks = [
 
 export const NAVBAR_HOME_LINK = "/";
 export const NAVBAR_OWNER_NAME = "Sathwick Reddy , Yalla";
-export const NAVBAR_TOGGLE_IMAGE_OPEN = "assets/menu.svg";
-export const NAVBAR_TOGGLE_IMAGE_CLOSE = "assets/close.svg";
+export const NAVBAR_TOGGLE_IMAGE_OPEN = "/sathwick-portfolio/assets/menu.svg";
+export const NAVBAR_TOGGLE_IMAGE_CLOSE = "/sathwick-portfolio/assets/close.svg";
 export const NAVBAR_TOGGLE_ALT_TEXT = "toggle";
 
 
@@ -75,14 +75,13 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
 
 export const HERO_CONTENT = `I'm an enthusiast with a passion for developing large-scale systems. I thrive on tackling complex challenges and delivering robust, scalable solutions. As an enthusiastic learner, I continuously explore new technologies and methodologies to enhance my skills and knowledge. My recent interests include distributed systems, cloud architecture, and advanced software design patterns. I am committed to driving innovation and excellence in every project I undertake, always seeking opportunities to grow and contribute to the tech community.`;
-export const PROFILE_PIC = "/assets/grid1.png"
 export const GITHUB_URL = "https://github.com/sathwick18"
 export const LINKEDIN_URL = "https://www.linkedin.com/in/sathwickreddy/"
 export const INSTA_URL = "https://www.instagram.com/sathwickreddyy/"
 
 
 // In constants/index.js or within Footer.jsx
-export const LINKEDIN_ICON_SRC = "/assets/linkedin.png";
-export const GITHUB_ICON_SRC = "/assets/github.svg";
-export const INSTAGRAM_ICON_SRC = "/assets/instagram.svg";
+export const LINKEDIN_ICON_SRC = "/sathwick-portfolio/assets/linkedin.png";
+export const GITHUB_ICON_SRC = "/sathwick-portfolio/assets/github.svg";
+export const INSTAGRAM_ICON_SRC = "/sathwick-portfolio/assets/instagram.svg";
 

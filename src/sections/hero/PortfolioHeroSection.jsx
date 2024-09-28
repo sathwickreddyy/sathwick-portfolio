@@ -1,10 +1,11 @@
 import React from "react";
 import {motion} from "framer-motion";
-import {GITHUB_URL, HERO_CONTENT, INSTA_URL, LINKEDIN_URL, PROFILE_PIC} from "../../constants/index.js";
+import {GITHUB_URL, HERO_CONTENT, INSTA_URL, LINKEDIN_URL} from "../../constants/index.js";
 import Button from "../../components/Button.jsx";
 import {TypeAnimation} from "react-type-animation";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {FaInstagram} from "react-icons/fa6";
+import {PROFILE_PIC} from "../../constants/about.js";
 
 const container = (delay) => ({
     hidden: {x: -100, opacity: 0},

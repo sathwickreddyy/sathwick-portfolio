@@ -5,8 +5,8 @@ export const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
 export const TO_NAME = "Sathwick Reddy, Yalla";
 export const TO_EMAIL = "sathwick@outlook.in";
 
-export const TERMINAL_IMAGE_SRC = "/assets/terminal.png";
-export const ARROW_UP_IMAGE_SRC = "/assets/arrow-up.png";
+export const TERMINAL_IMAGE_SRC = "/sathwick-portfolio/assets/terminal.png";
+export const ARROW_UP_IMAGE_SRC = "/sathwick-portfolio/assets/arrow-up.png";
 
 export const FORM_INITIAL_STATE = {
     name: "",
