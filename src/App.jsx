@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Navbar from "./sections/Navbar.jsx";
+import About from "./sections/About.jsx";
+import Projects from "./sections/Projects.jsx";
+import Clients from "./sections/Clients.jsx";
+import Contact from "./sections/Contact.jsx";
+import Footer from "./sections/Footer.jsx";
+import Experience from "./sections/Experience.jsx";
+import {Provider} from "react-redux";
+import applicationStore from "./utilities/redux/applicationStore.jsx";
+import PortfolioHero from "./sections/hero/PortfolioHero.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+const App = () => {
+    return (
+        <Provider store={applicationStore}>
+            <main className="max-w-10xl mx-auto">
+                <Navbar/>
+                {<PortfolioHero/>}
+                <About/>
+                <Experience/>
+                <Projects/>
+                <Clients/>
+                <Contact/>
+                <Footer/>
+            </main>
+        </Provider>
+    );
+};
+export default App;
