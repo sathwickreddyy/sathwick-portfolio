@@ -75,7 +75,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
 
 export const HERO_CONTENT = `I'm an enthusiast with a passion for developing large-scale systems. I thrive on tackling complex challenges and delivering robust, scalable solutions. As an enthusiastic learner, I continuously explore new technologies and methodologies to enhance my skills and knowledge. My recent interests include distributed systems, cloud architecture, and advanced software design patterns. I am committed to driving innovation and excellence in every project I undertake, always seeking opportunities to grow and contribute to the tech community.`;
-export const GITHUB_URL = "https://github.com/sathwick18"
+export const GITHUB_URL = "https://github.com/sathwickreddyy"
 export const LINKEDIN_URL = "https://www.linkedin.com/in/sathwickreddy/"
 export const INSTA_URL = "https://www.instagram.com/sathwickreddyy/"
 
