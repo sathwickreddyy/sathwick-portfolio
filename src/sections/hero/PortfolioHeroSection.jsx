@@ -6,6 +6,7 @@ import {TypeAnimation} from "react-type-animation";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {FaInstagram} from "react-icons/fa6";
 import {PROFILE_PIC} from "../../constants/about.js";
+import ShowResume from "../../utilities/ShowResume.jsx";
 
 const container = (delay) => ({
     hidden: {x: -100, opacity: 0},
@@ -69,13 +70,16 @@ const ContentSection = () => (
                 variants={container(1)}
                 initial="hidden"
                 animate={"visible"}
-                className={"my-2 max-w-2xl py-6 font-light"}
+                className={"my-2 max-w-2xl py-6 font-light text-justify"}
             >
                 {HERO_CONTENT}
             </motion.p>
             <motion.div variants={container(1.5)}
                         initial="hidden"
                         animate={"visible"}>
+                <div className={"md:hidden flex justify-center"}>
+                    <a href={"#resume"}><ShowResume /></a>
+                </div>
                 <div className={"my-10 flex items-center justify-center gap-4"}>
                     <p className={"font-semibold"}>Check out my </p>
                     <a href={LINKEDIN_URL} target={"_blank"}><FaLinkedin className={"w-8 h-8"}/></a>
@@ -108,7 +112,7 @@ const PortfolioHeroSection = () => {
                 <ContentSection/>
                 <ProfilePicSection/>
             </div>
-            <div className={"hidden md:block absolute bottom-7 left-0 right-0 w-full z-10 c-space"}>
+            <div className={"hidden lg:block absolute bottom-7 left-0 right-0 w-full z-10 c-space"}>
                 <a href={"#about"} className={"w-fit"}>
                     <Button
                         name={"Let's work together"}

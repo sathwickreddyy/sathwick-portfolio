@@ -57,11 +57,11 @@ const Contact = () => {
                 <img
                     src={TERMINAL_IMAGE_SRC}
                     alt={"terminal"}
-                    className={"absolute inset-0 min-h-screen hidden sm:block 2xl:h-full 2xl:w-full"}
+                    className={"absolute inset-0 min-h-screen hidden lg:block 2xl:h-full 2xl:w-full"}
                 />
                 <div className={"contact-container"}>
                     <h3 className={"sm:text-3xl text-2xl font-semibold text-gray_gradient"}>Let's Talk</h3>
-                    <p className={"text-lg text-white-600 mt-3"}>
+                    <p className={"text-lg text-white-600 mt-3 text-justify"}>
                         I'm always excited to connect and explore new opportunities. Whether you're an HR professional interested in discussing a job opportunity or a fellow enthusiast eager to collaborate on innovative projects, I'd love to hear from you. Looking forward to our conversation!
                     </p>
 
