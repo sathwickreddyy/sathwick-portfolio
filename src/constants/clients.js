@@ -4,35 +4,35 @@ export const CLIENTS_STAR_ALT_TEXT = "star";
 
 export const clientReviews = [
     {
-        id: 1,
-        name: "Emily Johnson",
-        position: "Marketing Director at GreenLeaf",
-        img: "/sathwick-portfolio/assets/review1.png",
+        id: 0,
+        name: "Manisha Choudary",
+        position: "Software Development Manager at Amazon",
+        img: "/sathwick-portfolio/assets/review0.jpeg",
         review:
-            "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+            "Sathwick have the strength, endurance and resilience to face challenges, He has a good eye for detail and the ability to analyse ambigous situation. He is capable of being flexible and adaptable in stressful situations.",
+    },
+    {
+        id: 1,
+        name: "Divyansh Singhal",
+        position: "Software Development Engineer at Amazon",
+        img: "/sathwick-portfolio/assets/review1.jpeg",
+        review:
+            "Sathwick is great at inventing and simplifying solutions. He takes feedback from all sources, big or small and uses them to create new,exciting solutions that offer wide range of possibilities. He always insists on the highest standards, especially in code cleanliness, so that we can avoid unnecessary tech debt. He also displays bias for action, pushing to deliver solutions in a speedy manner. He is very good at dive deep, coming up with solutions to complex problems, bugs and errors in a quick manner.",
     },
     {
         id: 2,
-        name: "Mark Rogers",
-        position: "Founder of TechGear Shop",
-        img: "/sathwick-portfolio/assets/review2.png",
+        name: "Ranjan Kumar",
+        position: "Senior Software Development Engineer At Amazon",
+        img: "/sathwick-portfolio/assets/review2.jpeg",
         review:
-            "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
+            "Sathwick has great technical domain knowledge and mentorship skills. He approaches the problem statements and try to find the solutions for the same without compromising with the quality of deliverables. He has an ability to carve out a good learning path to transfer his knowledge.",
     },
     {
         id: 3,
-        name: "John Dohsas",
-        position: "Project Manager at UrbanTech ",
-        img: "/sathwick-portfolio/assets/review3.png",
+        name: "Naga Swetha",
+        position: "Software Engineer At Amazon",
+        img: "/sathwick-portfolio/assets/review3.jpeg",
         review:
-            "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    },
-    {
-        id: 4,
-        name: "Ether Smith",
-        position: "CEO of BrightStar Enterprises",
-        img: "/sathwick-portfolio/assets/review4.png",
-        review:
-            "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
+            "Sathwick is a very hard-working person and very good at quickly understanding the tasks. He has a great knowledge in the AWS and is trusted person for anyone experiencing challenges. He is also very good at understanding the details and requirements of the project and also puts eﬀorts in helping other teammates.",
     },
 ];
