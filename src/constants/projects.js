@@ -10,6 +10,43 @@ export const PROJECT_SECTION_ARROW_UP_IMAGE = "/sathwick-portfolio/assets/arrow-
 
 export const myProjects = [
     {
+        title: "React Cognito Auth - Enterprise Authentication Library",
+        desc: "A production-grade reusable authentication library solution that reduces AWS Cognito integration time by 70% for web applications. Provides secure JWT management, pre-built UI flows, and error handling used by 15+ projects.",
+        subdesc:
+            "Published as an npm library with hundreds of weekly downloads, it handles thousands of monthly authentications across client projects. Built with TypeScript, AWS Amplify v6, and Tailwind CSS, offering 95% code reuse across authentication flows.",
+        href: "https://www.npmjs.com/package/@sathwickreddyy/cognito-auth-library",
+        texture: "/sathwick-portfolio/textures/project/cognito-auth-library.mp4",
+        logo: "/sathwick-portfolio/assets/cognito-auth-library.png",
+        logoStyle: {
+            backgroundColor: "#2F3A4E",
+            border: "0.2px solid #3B4559",
+            boxShadow: "0px 0px 60px 0px #4A90E24D",
+        },
+        spotlight: "/sathwick-portfolio/assets/spotlight1.png",
+        tags: [
+            {
+                id: 1,
+                name: "AWS Amplify",
+                path: "/sathwick-portfolio/assets/aws.png",
+            },
+            {
+                id: 2,
+                name: "React.js",
+                path: "/sathwick-portfolio/assets/react.svg",
+            },
+            {
+                id: 3,
+                name: "TypeScript",
+                path: "/sathwick-portfolio/assets/typescript.png",
+            },
+            {
+                id: 4,
+                name: "Tailwind CSS",
+                path: "/sathwick-portfolio/assets/tailwindcss.png",
+            },
+        ],
+    },
+    {
         title: "Podcastr - AI Podcast Platform",
         desc: "Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.",
         subdesc:
