@@ -1,5 +1,5 @@
 // grid 1 
-export const PROFILE_PIC = "/sathwick-portfolio/assets/grid1.png"
+export const PROFILE_PIC = "/sathwick-portfolio/assets/grid1_1.png"
 export const YOE =  "" + new Date().getFullYear() - 2021+"+";
 export const IMAGE_ALT_TEXT = "grid-1";
 export const PROFILE_DESCRIPTION = `

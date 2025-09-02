@@ -51,15 +51,15 @@ const ContentSection = () => (
                 <span>
                     <TypeAnimation
                         sequence={[
-                            `Senior Software Developer with ${YOE} Years Building Scalable Systems`,
+                            `Senior Software Developer `,
                             2000,
-                            "🚀 System Design & Architecture Specialist",
+                            "🚀 System Design Specialist",
                             1500,
-                            "🤖 Gen AI & Intelligent Agent Developer",
+                            "🤖 Gen AI Developer",
                             1500,
-                            "⚡ Full-Stack Engineer & Cloud Solutions Architect",
+                            "⚡ Cloud Solutions Architect",
                             1500,
-                            "🧠 Prompt Engineering & AI Integration Expert",
+                            "🧠 AI Integration Expert",
                             1500,
                         ]}
                         wrapper="span"
