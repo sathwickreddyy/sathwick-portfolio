@@ -5,7 +5,7 @@ import Button from "../../components/Button.jsx";
 import {TypeAnimation} from "react-type-animation";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 import {FaInstagram} from "react-icons/fa6";
-import {PROFILE_PIC} from "../../constants/about.js";
+import {PROFILE_PIC, YOE} from "../../constants/about.js";
 import ShowResume from "../../utilities/ShowResume.jsx";
 
 const container = (delay) => ({
@@ -51,14 +51,16 @@ const ContentSection = () => (
                 <span>
                     <TypeAnimation
                         sequence={[
-                            'Senior Software Engineer',
-                            1000,
-                            'Senior Software Developer',
-                            1000,
-                            'Full Stack Developer',
-                            1000,
-                            "Machine Learning Enthusiast",
-                            1000
+                            `Senior Software Developer with ${YOE} Years Building Scalable Systems`,
+                            2000,
+                            "🚀 System Design & Architecture Specialist",
+                            1500,
+                            "🤖 Gen AI & Intelligent Agent Developer",
+                            1500,
+                            "⚡ Full-Stack Engineer & Cloud Solutions Architect",
+                            1500,
+                            "🧠 Prompt Engineering & AI Integration Expert",
+                            1500,
                         ]}
                         wrapper="span"
                         speed={10}

@@ -1,29 +1,28 @@
 // grid 1 
 export const PROFILE_PIC = "/sathwick-portfolio/assets/grid1.png"
+export const YOE =  "" + new Date().getFullYear() - 2021+"+";
 export const IMAGE_ALT_TEXT = "grid-1";
 export const PROFILE_DESCRIPTION = `
-    With four years of experience, I honed my skills in backend, cloud,
-    and frontend development, consistently delivering scalable solutions.
-    My expertise encompasses problem-solving, data structures, algorithms,
-    and system design.`;
+    Senior Software Engineer with ${YOE} years architecting production systems at top-tier companies. 
+    Led cross-functional teams, reduced infrastructure costs by $100K+ annually, and delivered 
+    critical projects ahead of schedule. Expertise in distributed systems, cloud architecture, 
+    and high-scale backend services serving millions of users.`;
 
 export const GRID_COL_SPAN_2_IMAGE_SRC = "/sathwick-portfolio/assets/grid2.png";
 export const GRID_COL_SPAN_2_IMAGE_ALT_TEXT = "https://drive.google.com/file/d/1J1vvk6JylV0eavNWHMu84NPwzdID8U9W/view?usp=sharing";
 export const GRID_COL_SPAN_2_TECH_STACK_HEADING = "Tech Stack";
-export const GRID_COL_SPAN_2_TECH_STACK_DESCRIPTION = `
-    I am proficient in a variety of programming languages and frameworks,
-    including Python, Java, Spring Boot, and Angular JS, TypeScript, React
-    JS, Tailwind CSS, Node JS. Additionally, I have significant experience
-    with big data technologies such as Hadoop and Apache Spark and am
-    adept at utilizing AWS cloud services. Have hands-on experience in
-    the machine learning domain.`;
+export const GRID_COL_SPAN_2_TECH_STACK_DESCRIPTION = `Senior-level expertise in enterprise software development with Python, Java, Spring Boot, and FastAPI for robust backend services.
+    Experienced in React, TypeScript, and modern frontend technologies for full-stack development. Cloud architecture specialist
+with extensive AWS experience including serverless, containers, and a touch on big data technologies. Currently pioneering
+Gen AI applications, prompt engineering, and autonomous agent development. Proven expertise in system design, distributed
+architecture, and scalable solution development.`;
 
 export const GRID_COL_SPAN_4_FILE_NAME = "SathwickReddyResume.pdf";
 export const GRID_COL_SPAN_4_FILE_PATH = "/sathwick-portfolio/pdfs/resume.pdf";
 export const GRID_COL_SPAN_4_IMAGE_SRC = "/sathwick-portfolio/assets/grid3.png";
 export const GRID_COL_SPAN_4_IMAGE_ALT = "grid-4";
-export const GRID_COL_SPAN_4_HEADTEXT = "My Passion for Coding";
-export const GRID_COL_SPAN_4_SUBTEXT = "I love solving problems and building things through code. Coding isn't just my profession - it's my passion.";
+export const GRID_COL_SPAN_4_HEADTEXT = "Building the Future with AI & System Design";
+export const GRID_COL_SPAN_4_SUBTEXT = "I Passionate about architecting scalable systems and pioneering Gen AI solutions. From distributed services to intelligent agents - I build technology that makes a difference.";
 export const GRID_COL_4_RESUME_PATH = "/sathwick-portfolio/pdfs/resume.pdf"
 export const GRID_COL_SPAN_4_VIEW_RESUME_TEXT = "View Resume";
 export const GRID_COL_SPAN_4_GO_BACK_TEXT = "Go Back";

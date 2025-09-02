@@ -4,7 +4,7 @@ export const workExperiences = [
         name: "Morgan Stanley",
         pos: "Senior Software Engineer",
         duration: "Jul 2024 - Present",
-        title: "As a Senior Software Engineer in the Liquidity Forecast Technology team at Morgan Stanley, I focus on developing and optimizing liquidity forecasting tools to enhance financial decision-making.",
+        title: "Senior Software Engineer in the Liquidity Forecast Technology team, architecting and optimizing enterprise-grade liquidity forecasting systems for critical financial decision-making. Leading Gen AI initiatives and participating in multiple firm-wide AI innovation events, developing intelligent agents and advanced prompt engineering solutions to enhance developer productivity and system automation.",
         icon: "/sathwick-portfolio/assets/morgan_stanley_logo.jpeg",
         animation: "victory",
     },
@@ -14,8 +14,7 @@ export const workExperiences = [
         pos: "Software Development Engineer",
         duration: "Feb 2022 - Jun 2024",
         title:
-            "As a software developer at Amazon, I implemented a cost-effective L3 step function construct, saving the organization over $100,000 monthly. I introduced a generic orchestration model for EMR jobs and asynchronous resources, reducing developer setup time by 95%. Leading a team of two, we delivered a critical project ahead of schedule. I enhanced code efficiency with a constructs library, cutting boilerplate code by 40% for over 10 clients.js. I resolved over 100 tickets in a week and improved project setup efficiency by 70%. Additionally, I conducted AWS training sessions that boosted team proficiency by 30% and collaborated on high-priority projects involving various AWS resources.",
-        icon: "/sathwick-portfolio/assets/amazon_logo.jpeg",
+            "Designed and implemented cost-effective distributed systems saving $100K+ monthly through intelligent L3 step function constructs. Architected generic orchestration models for EMR jobs and asynchronous resource management, reducing developer setup time by 95%. Led cross-functional teams delivering critical projects ahead of schedule while building reusable constructs library reducing boilerplate code by 40% across 10+ services. Conducted technical training sessions improving team proficiency by 30% and resolved 100+ complex technical challenges.",        icon: "/sathwick-portfolio/assets/amazon_logo.jpeg",
         animation: "clapping",
     },
     {
@@ -23,8 +22,7 @@ export const workExperiences = [
         name: "Oracle",
         pos: "Application Developer",
         duration: "Jan 2021 - Feb 2022",
-        title: "As an Application Developer at Oracle, I worked in the Business Analytics Team focusing on the RPD Generator Framework Backend and creating visualizations using Oracle Analytics Services. I contributed to both on-premise and cloud applications by debugging and resolving software defects. I optimized SQL query execution time by 43% through efficient use of map side joins. Collaborating with cross-functional teams, I designed, implemented, and tested software features. Additionally, I modernized codebases to improve functionality and reduce costs, and managed the development and implementation of application tests using industry-standard tools.",
-        icon: "/sathwick-portfolio/assets/oracle_logo.jpeg",
+        title: "Software engineer in Business Analytics Team, developing RPD Generator Framework backend and Oracle Analytics Services visualizations. Optimized SQL query performance by 43% through advanced database engineering and map-side join implementations. Collaborated with cross-functional teams to design, implement, and test enterprise software features while modernizing legacy codebases to improve functionality and reduce operational costs.",        icon: "/sathwick-portfolio/assets/oracle_logo.jpeg",
         animation: "salute",
     },
 ];

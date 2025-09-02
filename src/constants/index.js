@@ -1,3 +1,5 @@
+import {YOE} from "./about.js";
+
 export const navLinks = [
     {
         id: 1,
@@ -32,7 +34,7 @@ export const navLinks = [
 ];
 
 export const NAVBAR_HOME_LINK = "/";
-export const NAVBAR_OWNER_NAME = "Sathwick Reddy , Yalla";
+export const NAVBAR_OWNER_NAME = "Sathwick Reddy - A Senior Software Developer";
 export const NAVBAR_TOGGLE_IMAGE_OPEN = "/sathwick-portfolio/assets/menu.svg";
 export const NAVBAR_TOGGLE_IMAGE_CLOSE = "/sathwick-portfolio/assets/close.svg";
 export const NAVBAR_TOGGLE_ALT_TEXT = "toggle";
@@ -74,7 +76,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 
 
-export const HERO_CONTENT = `I'm an enthusiast with a passion for developing large-scale systems. I thrive on tackling complex challenges and delivering robust, scalable solutions. As an enthusiastic learner, I continuously explore new technologies and methodologies to enhance my skills and knowledge. My recent interests include distributed systems, cloud architecture, and advanced software design patterns. I am committed to driving innovation and excellence in every project I undertake, always seeking opportunities to grow and contribute to the tech community.`;
+export const HERO_CONTENT = `I'm a Senior Software Developer with ${YOE} years of experience architecting and developing enterprise-scale systems at Morgan Stanley, Amazon, and Oracle. I specialize in building robust backend services, distributed systems, and intelligent AI-powered applications. Currently mastering advanced system design patterns while pioneering Gen AI solutions and autonomous agent development. My expertise spans cloud architecture, scalable backend development, and cutting-edge AI integration, with a proven track record of delivering high-impact solutions that drive business value.`
 export const GITHUB_URL = "https://github.com/sathwickreddyy"
 export const LINKEDIN_URL = "https://www.linkedin.com/in/sathwickreddy/"
 export const INSTA_URL = "https://www.instagram.com/sathwickreddyy/"
