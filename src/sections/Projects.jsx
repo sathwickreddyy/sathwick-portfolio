@@ -114,29 +114,31 @@ const Projects = () => {
 
                     <DisplayTags currentProject={currentProject}/>
 
-                    <div className={"flex justify-between items-center mt-7"}>
-                        <button
-                            className={"arrow-btn"}
-                            onClick={() => handleNavigation("previous")}
-                        >
-                            <img
-                                src={PROJECT_SECTION_ARROW_LEFT_IMAGE}
-                                className={"w-4 h-4"}
-                                alt={PROJECT_SECTION_ARROW_LEFT_ALT_TEXT}
-                            />
-                        </button>
+                    {projectsCount > 1 && (
+                        <div className={"flex justify-between items-center mt-7"}>
+                            <button
+                                className={"arrow-btn"}
+                                onClick={() => handleNavigation("previous")}
+                            >
+                                <img
+                                    src={PROJECT_SECTION_ARROW_LEFT_IMAGE}
+                                    className={"w-4 h-4"}
+                                    alt={PROJECT_SECTION_ARROW_LEFT_ALT_TEXT}
+                                />
+                            </button>
 
-                        <button
-                            className={"arrow-btn"}
-                            onClick={() => handleNavigation("next")}
-                        >
-                            <img
-                                src={PROJECT_SECTION_ARROW_RIGHT_IMAGE}
-                                className={"w-4 h-4"}
-                                alt={PROJECT_SECTION_ARROW_RIGHT_ALT_TEXT}
-                            />
-                        </button>
-                    </div>
+                            <button
+                                className={"arrow-btn"}
+                                onClick={() => handleNavigation("next")}
+                            >
+                                <img
+                                    src={PROJECT_SECTION_ARROW_RIGHT_IMAGE}
+                                    className={"w-4 h-4"}
+                                    alt={PROJECT_SECTION_ARROW_RIGHT_ALT_TEXT}
+                                />
+                            </button>
+                        </div>
+                    )}
                 </div>
 
                 <ProjectCanvasDisplay currentProject={currentProject}/>
