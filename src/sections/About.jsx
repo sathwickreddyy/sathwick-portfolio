@@ -90,7 +90,7 @@ const GridColSpan3 = () => {
                         height={isMobile ? 336 : isTablet ? 400 : 512}
                         width={isMobile ? window.innerWidth / 1.6 : isTablet ? window.innerWidth / 3 : isMonitor ? 600 : 400}
                         backgroundColor={"rgba(0,0,0,0)"}
-                        backgroundImageOpacitiy={0}
+                        backgroundImageOpacity={0}
                         showAtmosphere
                         showGraticules
                         globeImageUrl={`//unpkg.com/three-globe/example/img/earth-${getMode()}.jpg`}

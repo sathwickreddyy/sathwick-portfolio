@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
     EMAILJS_SERVICE_ID,
@@ -18,6 +18,13 @@ const Contact = () => {
     const formRef = useRef();
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState(FORM_INITIAL_STATE);
+    const [status, setStatus] = useState(null);
+
+    useEffect(() => {
+        if (!status) return;
+        const t = setTimeout(() => setStatus(null), 5000);
+        return () => clearTimeout(t);
+    }, [status]);
 
     const handleChange = ({ target: { name, value } }) => {
         setForm({ ...form, [name]: value });
@@ -26,6 +33,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        setStatus(null);
 
         try {
             await emailjs.send(
@@ -41,13 +49,13 @@ const Contact = () => {
                 EMAILJS_PUBLIC_KEY
             );
 
-            setLoading(false);
-            alert(MESSAGES.success);
+            setStatus({ kind: "success", message: MESSAGES.success });
             setForm(FORM_INITIAL_STATE);
         } catch (error) {
+            console.error(error);
+            setStatus({ kind: "error", message: MESSAGES.error });
+        } finally {
             setLoading(false);
-            console.log(error);
-            alert(MESSAGES.error);
         }
     };
 
@@ -106,6 +114,20 @@ const Contact = () => {
                             {loading ? "Sending..." : "Send Message"}
                             <img src={ARROW_UP_IMAGE_SRC} alt={"arrow-up"} className={"field-btn_arrow"} />
                         </button>
+
+                        <div role="status" aria-live="polite" className="min-h-6">
+                            {status && (
+                                <p
+                                    className={
+                                        status.kind === "success"
+                                            ? "text-sm text-lime-300"
+                                            : "text-sm text-red-400"
+                                    }
+                                >
+                                    {status.message}
+                                </p>
+                            )}
+                        </div>
                     </form>
                 </div>
             </div>

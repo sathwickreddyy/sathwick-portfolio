@@ -7,7 +7,7 @@ import {
     navLinks
 } from "../constants/index.js";
 import {useDispatch} from "react-redux";
-import {hideResume, showResume} from "../utilities/redux/viewResume.jsx";
+import {hideResume} from "../utilities/redux/viewResume.jsx";
 import ShowResume from "../utilities/ShowResume.jsx";
 
 const NavItems = () => {
@@ -16,24 +16,21 @@ const NavItems = () => {
         dispatch(hideResume());
     };
 
-    const SectionName = (name) => {
-        return name === "Resume" ? (
-            <ShowResume />
-        ) : (
-            <div onClick={handleHideResume}>{name}</div>
-        );
-    };
-
     return (
         <ul className="nav-ul">
-            {navLinks.map(({id, href, name}) => (
-                <li key={id}>
-                    <a href={href} className={"nav-li_a"} onClick={() => {
-                    }}>
-                        {SectionName(name)}
-                    </a>
-                </li>
-            ))}
+            {navLinks.map(({id, href, name}) =>
+                name === "Resume" ? (
+                    <li key={id}>
+                        <ShowResume />
+                    </li>
+                ) : (
+                    <li key={id}>
+                        <a href={href} className={"nav-li_a"} onClick={handleHideResume}>
+                            {name}
+                        </a>
+                    </li>
+                )
+            )}
         </ul>
     );
 };

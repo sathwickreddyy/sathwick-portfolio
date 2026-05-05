@@ -38,7 +38,7 @@ const Experience = () => {
                 </motion.h3>
 
                 <div className={"work-container"}>
-                    <div
+                    <motion.div
                         className={"work-canvas"}
                         animate={mainControls}
                         initial={"hidden"}
@@ -60,7 +60,7 @@ const Experience = () => {
                                 <Developer position-y={-3} scale={3} animationName={animationName}/>
                             </Suspense>
                         </Canvas>
-                    </div>
+                    </motion.div>
 
                     <div className={"work-content"}>
                         <div className={"sm:py-10 py-5 sm:px-5 px-2.5"}>

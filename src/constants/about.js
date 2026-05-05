@@ -1,6 +1,6 @@
 // grid 1 
 export const PROFILE_PIC = "/sathwick-portfolio/assets/grid1_1.png"
-export const YOE =  "" + new Date().getFullYear() - 2021+"+";
+export const YOE = `${new Date().getFullYear() - 2021}+`;
 export const IMAGE_ALT_TEXT = "grid-1";
 export const PROFILE_DESCRIPTION = `
     Senior Software Engineer with ${YOE} years architecting production systems at top-tier companies. 
@@ -9,7 +9,7 @@ export const PROFILE_DESCRIPTION = `
     and high-scale backend services serving millions of users.`;
 
 export const GRID_COL_SPAN_2_IMAGE_SRC = "/sathwick-portfolio/assets/grid2.png";
-export const GRID_COL_SPAN_2_IMAGE_ALT_TEXT = "https://drive.google.com/file/d/1J1vvk6JylV0eavNWHMu84NPwzdID8U9W/view?usp=sharing";
+export const GRID_COL_SPAN_2_IMAGE_ALT_TEXT = "Illustration of my tech stack";
 export const GRID_COL_SPAN_2_TECH_STACK_HEADING = "Tech Stack";
 export const GRID_COL_SPAN_2_TECH_STACK_DESCRIPTION = `Senior-level expertise in enterprise software development with Python, Java, Spring Boot, and FastAPI for robust backend services.
     Experienced in React, TypeScript, and modern frontend technologies for full-stack development. Cloud architecture specialist

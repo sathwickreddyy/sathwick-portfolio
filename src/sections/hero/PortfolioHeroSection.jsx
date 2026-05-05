@@ -80,7 +80,7 @@ const ContentSection = () => (
                         initial="hidden"
                         animate={"visible"}>
                 <div className={"md:hidden flex justify-center"}>
-                    <a href={"#resume"}><ShowResume /></a>
+                    <ShowResume />
                 </div>
                 <div className={"my-10 flex items-center justify-center gap-4"}>
                     <p className={"font-semibold"}>Check out my </p>
