@@ -12,6 +12,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Do NOT push. Do NOT create PRs. Do NOT run destructive operations (force-push, reset --hard, branch deletion). Those still need explicit permission.
 - If the units are tightly coupled (e.g., file rename + import update), combine into one commit — don't split for the sake of splitting.
 
+## Memory scope
+
+Project-local memory lives under [`.claude/memory/`](.claude/memory/MEMORY.md) — backlogs, session status, and external references, version-controlled with the code. Read `.claude/memory/MEMORY.md` for the index before major work.
+
+User-scope collaboration memory (who Sathwick is, how he likes to work) lives separately in `~/.claude/projects/<key>/memory/` and doesn't get committed. When creating new memory: project facts → repo, collaboration prefs → user home.
+
 ## Commands
 
 ```bash
