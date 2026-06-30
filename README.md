@@ -53,11 +53,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Sathwick Reddy
 - GitHub: [sathwickreddyy](https://github.com/sathwickreddyy)
 - Portfolio: [Live Site](https://sathwickreddyy.github.io/sathwick-portfolio/)
-
-## Acknowledgements
-
-- React
-- Vite
-- Tailwind CSS
-- Three.js
-- GSAP
